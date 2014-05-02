@@ -129,22 +129,23 @@ add_shortcode('ContactMap', 'get_ContactMap');
 function get_MassagePackagePurchase() {
 
 	return '
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="XEUPA39TY58RG">
 <table>
-<td><select name="os0">
-	<option value="Pkg of 3 - 60 minute sessions">Pkg of 3 - 60 minute sessions $199.00</option>
-	<option value="Pkg of 6 - 60 minute sessions">Pkg of 6 - 60 minute sessions $390.00</option>
-	<option value="Pkg of 3 - 75 minute sessions">Pkg of 3 - 75 minute sessions $240.00</option>
-	<option value="Pkg of 6 - 75 minute sessions">Pkg of 6 - 75 minute sessions $415.00</option>
-	<option value="Pkg of 3 - 90 minute sessions">Pkg of 3 - 90 minute sessions $285.00</option>
-	<option value="Pkg of 6 - 90 minute sessions">Pkg of 6 - 90 minute sessions $560.00</option>
+<tr><td><input type="hidden" name="on0" value="Massage Packages">Massage Packages</td></tr><tr><td><select name="os0">
+  <option value="Pkg of 3 - 60 minute sessions">Pkg of 3 - 60 minute sessions $215.00 USD</option>
+  <option value="Pkg of 6 - 60 minute sessions">Pkg of 6 - 60 minute sessions $420.00 USD</option>
+  <option value="Pkg of 3 - 75 minute sessions">Pkg of 3 - 75 minute sessions $255.00 USD</option>
+  <option value="Pkg of 6 - 75 minute sessions">Pkg of 6 - 75 minute sessions $505.00 USD</option>
+  <option value="Pkg of 3 - 90 minute sessions">Pkg of 3 - 90 minute sessions $300.00 USD</option>
+  <option value="Pkg of 6 - 90 minute sessions">Pkg of 6 - 90 minute sessions $590.00 USD</option>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/scr/pixel.gif" width="1" height="1"></form>'
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>'
 
 ;}
 
@@ -155,55 +156,30 @@ add_shortcode('MassagePackagePurchase', 'get_MassagePackagePurchase');
 function get_SingleMassagePurchase() {
 
 	return '
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="2FYXBHNCB86CS">
 <table>
-<td><select name="os0">
-	<option value="60 minutes">60 minutes $70.00</option>
-	<option value="60 minutes with Full Body Scrub">60 minutes with Full Body Scrub $105.00</option>
-	<option value="75 minutes">75 minutes $85.00</option>
-	<option value="75 minutes with Full Body Scrub">75 minutes with Full Body Scrub $120.00</option>
-	<option value="90 minutes">90 minutes $100.00</option>
-	<option value="90 minutes with Full Body Scrub">90 minutes with Full Body Scrub $135.00</option>
-	<option value="Hot Stone Massage (90 minutes)">Hot Stone Massage (90 minutes) $110.00</option>
-	<option value="Full Body Scrub (approximately 50 minutes)">Full Body Scrub (approximately 50 minutes) $60.00</option>
-	<option value="Current Monthly Special">Current Monthly Special $105.00</option>
+<tr><td><input type="hidden" name="on0" value="Massage Packages">Massage Packages</td></tr><tr><td><select name="os0">
+  <option value="60 minutes">60 minutes $75.00 USD</option>
+  <option value="60 minutes with Full Body Scrub">60 minutes with Full Body Scrub $115.00 USD</option>
+  <option value="75 minutes">75 minutes $90.00 USD</option>
+  <option value="75 minutes with Full Body Scrub">75 minutes with Full Body Scrub $130.00 USD</option>
+  <option value="90 minutes">90 minutes $105.00 USD</option>
+  <option value="90 minutes with Full Body Scrub">90 minutes with Full Body Scrub $145.00 USD</option>
+  <option value="Full Body Scrub (approximately 50 minutes)">Full Body Scrub (approximately 50 minutes) $60.00 USD</option>
+  <option value="Current Monthly Special">Current Monthly Special $115.00 USD</option>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>'
+</form>
+'
 
 ;}
 
 add_shortcode('SingleMassagePurchase', 'get_SingleMassagePurchase');
-
-
-// custom admin login logo
-function custom_login_logo() {
-	echo '<style type="text/css">
-	h1 a { background-image: url('.get_bloginfo('stylesheet_directory').'/images/custom-login-logo.png) !important; padding-bottom: 70px !important;}
-	#login { padding: 50px 0 0; }
-	</style>';
-}
-add_action('login_head', 'custom_login_logo');
-
-
-// changing the login page URL
-    function put_my_url(){
-    return bloginfo('url'); // changes the url link from wordpress.org to your blog or website's url
-    }
-    add_filter('login_headerurl', 'put_my_url');
-
-// changing the login page URL hover text
-    function put_my_title(){
-    return bloginfo('name'); // changing the title from "Powered by WordPress" to whatever you wish
-    }
-    add_filter('login_headertitle', 'put_my_title');
-
 
 
 

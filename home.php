@@ -1,28 +1,18 @@
 <?php get_header(); ?>
 
-
-
 <div id="content">
 
-
-
 	<div id="homepage">
-
-		
 
         <div class="hometop">
 
             <div class="hometopleft">
 
-            <?php echo do_shortcode("[ngg_images gallery_ids='1' display_type='photocrati-nextgen_basic_slideshow' show_slideshow_link='1']"); ?>
+                <?php echo do_shortcode("[ngg_images gallery_ids='1' display_type='photocrati-nextgen_basic_slideshow' show_slideshow_link='1']"); ?>
 
                 <?php $recent = new WP_Query('page_id='.ot_option('home_top')); while($recent->have_posts()) : $recent->the_post();?>
 
-
-
             </div>
-
-
 
             <div class="hometopright">
 
@@ -47,7 +37,6 @@
 
 		</div>
 
-        
 
         <div class="clear"></div>
 
@@ -108,23 +97,13 @@
                 <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
                 <?php endwhile; ?>
-
             </div>
-
         </div>
-
-		
-
 	</div>
-
-		
-
 </div>
 
 
-
 <?php // End main column  ?>
-
 
 
 <?php get_footer(); ?>
